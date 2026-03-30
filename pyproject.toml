@@ -1,0 +1,28 @@
+[project]
+name = "game-agent"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "xin.zhang", email = "112859811@qq.com"},
+]
+dependencies = ["fastapi[standard]>=0.135.1", "pydantic-ai>=1.70.0", "pyautogui>=0.9.54", "tenacity>=8.0.0", "python-dotenv>=1.0.0", "pytest>=7.0.0", "pytest-asyncio>=0.23.0", "pillow>=12.1.1", "loguru>=0.7.3", "async-adbutils>=0.1.1"]
+requires-python = ">=3.14"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+# [[tool.pdm.scripts]]
+# name = "game-agent"
+# path = "game_agent"
+# description
+
+[[tool.pdm.source]]
+name = "pypi"
+url = "https://mirrors.huaweicloud.com/repository/pypi/simple"

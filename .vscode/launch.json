@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run debug",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Run test case",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "pytest",
+      "args": ["-sv", "${file}"],
+      "console": "integratedTerminal"
+    }
+  ]
+}
