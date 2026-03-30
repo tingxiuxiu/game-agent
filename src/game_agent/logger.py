@@ -10,7 +10,7 @@ LOG_DIR = PROJECT_ROOT / "logs"
 LOG_FILE = LOG_DIR / "game-agent.log"
 
 
-def setup_logging(level=logging.DEBUG):
+def setup_logging(level: int | str = logging.DEBUG):
     LOG_DIR.mkdir(exist_ok=True)
 
     loguru_logger.remove()
@@ -22,7 +22,10 @@ def setup_logging(level=logging.DEBUG):
         logging.ERROR: "ERROR",
     }
 
-    loguru_level = level_map.get(level, "DEBUG")
+    if isinstance(level, str):
+        loguru_level = level.upper()
+    else:
+        loguru_level = level_map.get(level, "DEBUG")
 
     loguru_logger.add(
         LOG_FILE,

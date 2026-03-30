@@ -5,7 +5,19 @@ description = "Default template for PDM package"
 authors = [
     {name = "xin.zhang", email = "112859811@qq.com"},
 ]
-dependencies = ["fastapi[standard]>=0.135.1", "pydantic-ai>=1.70.0", "pyautogui>=0.9.54", "tenacity>=8.0.0", "python-dotenv>=1.0.0", "pytest>=7.0.0", "pytest-asyncio>=0.23.0", "pillow>=12.1.1", "loguru>=0.7.3", "async-adbutils>=0.1.1"]
+dependencies = [
+    "fastapi[standard]>=0.135.1",
+    "pydantic-ai>=1.70.0",
+    "pyautogui>=0.9.54",
+    "tenacity>=8.0.0",
+    "python-dotenv>=1.0.0",
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pillow>=12.1.1",
+    "loguru>=0.7.3",
+    "async-adbutils>=0.1.1",
+    "pydantic-settings>=2.13.1",
+]
 requires-python = ">=3.14"
 readme = "README.md"
 license = {text = "MIT"}
